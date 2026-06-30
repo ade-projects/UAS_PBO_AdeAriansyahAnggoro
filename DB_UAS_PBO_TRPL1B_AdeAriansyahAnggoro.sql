@@ -20,9 +20,6 @@
 -- Table structure for table `tabel_mahasiswa`
 --
 
-CREATE DATABASE IF NOT EXISTS DB_UAS_PBO_TRPL1B_AdeAriansyahAnggoro;
-USE DB_UAS_PBO_TRPL1B_AdeAriansyahAnggoro;
-
 DROP TABLE IF EXISTS `tabel_mahasiswa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8mb4 */;
@@ -66,12 +63,12 @@ INSERT INTO `tabel_mahasiswa` VALUES
 (12,'Muhammad Rizky','202601012',4,0,'Bidikmisi',NULL,NULL,'KIP-2026-005',700000,NULL,NULL),
 (13,'Nadia Utami','202601013',2,0,'Bidikmisi',NULL,NULL,'KIP-2026-006',700000,NULL,NULL),
 (14,'Oki Pratama','202601014',8,0,'Bidikmisi',NULL,NULL,'KIP-2026-007',750000,NULL,NULL),
-(15,'Putri Handayani','202601015',4,1000000,'Prestasi',NULL,NULL,NULL,NULL,'Djarum Foundation',3.50),
-(16,'Rian Hidayat','202601016',6,1500000,'Prestasi',NULL,NULL,NULL,NULL,'Kemenpora',3.25),
-(17,'Siska Amelia','202601017',2,1200000,'Prestasi',NULL,NULL,NULL,NULL,'Bank Indonesia',3.50),
-(18,'Taufik Hidayat','202601018',4,0,'Prestasi',NULL,NULL,NULL,NULL,'Tanoto Foundation',3.75),
-(19,'Utari Dewi','202601019',6,2000000,'Prestasi',NULL,NULL,NULL,NULL,'Pemprov Jateng',3.00),
-(20,'Vina Panduwinata','202601020',2,1000000,'Prestasi',NULL,NULL,NULL,NULL,'Djarum Foundation',3.50);
+(15,'Putri Handayani','202601015',4,4000000,'Prestasi',NULL,NULL,NULL,NULL,'Djarum Foundation',3.50),
+(16,'Rian Hidayat','202601016',6,6000000,'Prestasi',NULL,NULL,NULL,NULL,'Kemenpora',3.25),
+(17,'Siska Amelia','202601017',2,4800000,'Prestasi',NULL,NULL,NULL,NULL,'Bank Indonesia',3.50),
+(18,'Taufik Hidayat','202601018',4,5000000,'Prestasi',NULL,NULL,NULL,NULL,'Tanoto Foundation',3.75),
+(19,'Utari Dewi','202601019',6,4000000,'Prestasi',NULL,NULL,NULL,NULL,'Pemprov Jateng',3.00),
+(20,'Vina Panduwinata','202601020',2,4000000,'Prestasi',NULL,NULL,NULL,NULL,'Djarum Foundation',3.50);
 /*!40000 ALTER TABLE `tabel_mahasiswa` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -86,4 +83,4 @@ SET AUTOCOMMIT=@OLD_AUTOCOMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-06-30 14:24:38
+-- Dump completed on 2026-06-30 15:13:07
