@@ -1,7 +1,7 @@
 <?php
 // File: models/MahasiswaBidikmisi.php
 
-require_once 'Mahasiswa.php';
+require_once __DIR__ . '/Mahasiswa.php';
 
 class MahasiswaBidikmisi extends Mahasiswa {
     private $nomorKipKuliah;

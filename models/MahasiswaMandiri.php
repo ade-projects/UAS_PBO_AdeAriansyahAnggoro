@@ -1,7 +1,7 @@
 <?php
 // File: models/MahasiswaMandiri.php
 
-require_once 'Mahasiswa.php';
+require_once __DIR__ . '/Mahasiswa.php';
 
 class MahasiswaMandiri extends Mahasiswa {
     private $golonganUkt;

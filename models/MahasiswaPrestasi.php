@@ -1,7 +1,7 @@
 <?php
 // File: models/MahasiswaPrestasi.php
 
-require_once 'Mahasiswa.php';
+require_once __DIR__ . '/Mahasiswa.php';
 
 class MahasiswaPrestasi extends Mahasiswa {
     private $namaInstansiBeasiswa;
