@@ -4,8 +4,8 @@
 class Database {
     private $host = "localhost";
     private $db_name = "DB_UAS_PBO_TRPL1B_AdeAriansyahAnggoro";
-    private $username = "dev"; // Sesuaikan dengan konfigurasi MySQL kamu
-    private $password = "dev";     // Sesuaikan dengan konfigurasi MySQL kamu
+    private $username = "root"; // Sesuaikan dengan konfigurasi MySQL kamu
+    private $password = "";     // Sesuaikan dengan konfigurasi MySQL kamu
     private $conn;
 
     /**
