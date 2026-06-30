@@ -4,28 +4,18 @@
 require_once 'Mahasiswa.php';
 
 class MahasiswaMandiri extends Mahasiswa {
-    // Properti tambahan khusus Jalur Mandiri
     private $golonganUkt;
     private $namaWali;
 
-    // Constructor
     public function __construct(array $data) {
-        // Memanggil constructor dari abstract class Mahasiswa
         parent::__construct($data);
-        
-        // Memetakan properti spesifik Mandiri
         $this->golonganUkt = isset($data['golongan_ukt']) ? (int)$data['golongan_ukt'] : null;
         $this->namaWali = $data['nama_wali'] ?? '';
     }
 
-    // Getter untuk properti spesifik
     public function getGolonganUkt() { return $this->golonganUkt; }
     public function getNamaWali() { return $this->namaWali; }
 
-    /**
-     * Method Khusus: Mengambil semua data mahasiswa jalur Mandiri
-     * dan mengubahnya menjadi objek MahasiswaMandiri
-     */
     public static function getAll(PDO $db) {
         $query = "SELECT * FROM tabel_mahasiswa WHERE jenis_pembiayaan = 'Mandiri'";
         $stmt = $db->prepare($query);
@@ -33,17 +23,31 @@ class MahasiswaMandiri extends Mahasiswa {
         
         $listMahasiswa = [];
         while ($row = $stmt->fetch()) {
-            $listMahasiswa[] = new self($row); // self merujuk ke MahasiswaMandiri
+            $listMahasiswa[] = new self($row);
         }
         return $listMahasiswa;
     }
 
-    // Tahan dulu: Implementasi abstract method kosong (wajib ada di PHP)
+    /**
+     * Overriding: Tagihan Mandiri = UKT + 100.000 (biaya administrasi)
+     */
     public function hitungTagihanSemester() {
-        // Logika tagihan mandiri nanti di sini
+        return $this->tarifUktNominal + 100000;
     }
 
+    /**
+     * Overriding: Mengembalikan array of object untuk info unik Mandiri
+     */
     public function tampilkanSpesifikasiAkademik() {
-        // Logika spesifikasi mandiri nanti di sini
+        return [
+            (object) [
+                'label' => 'Golongan UKT',
+                'value' => $this->golonganUkt
+            ],
+            (object) [
+                'label' => 'Nama Wali',
+                'value' => $this->namaWali
+            ]
+        ];
     }
 }
