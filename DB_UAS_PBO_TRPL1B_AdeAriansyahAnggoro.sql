@@ -20,6 +20,9 @@
 -- Table structure for table `tabel_mahasiswa`
 --
 
+CREATE DATABASE IF NOT EXISTS DB_UAS_PBO_TRPL1B_AdeAriansyahAnggoro;
+USE DB_UAS_PBO_TRPL1B_AdeAriansyahAnggoro;
+
 DROP TABLE IF EXISTS `tabel_mahasiswa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8mb4 */;
